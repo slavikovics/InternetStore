@@ -196,7 +196,7 @@ public class CentralProcessingUnit : StoreItem
     
     private void SetSupportedRandomAccessMemoryType(string value)
     {
-        if (_supportedRandomAccessMemoryType is null && value != "") _supportedRandomAccessMemoryType = value.ToUpper();
+        if (_supportedRandomAccessMemoryType is null && value != "") _supportedRandomAccessMemoryType = value;
         else if (value == "") throw new ArgumentException("Supported memory access type cannot be empty.");
         else throw new InvalidOperationException("Supported memory access type is already set.");
     }
