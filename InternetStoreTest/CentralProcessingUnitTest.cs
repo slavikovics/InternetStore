@@ -6,7 +6,7 @@ namespace InternetStoreTest;
 public sealed class CentralProcessingUnitTest
 {
     [TestMethod]
-    public void TestMethodTestSocket()
+    public void TestMethodSocket()
     {
         CentralProcessingUnit item = new CentralProcessingUnit("1", "1", 100);
 
