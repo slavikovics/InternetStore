@@ -10,8 +10,8 @@ namespace InternetStoreTest
         {
             StoreSection storeSection = new StoreSection("Main", "Test", "Test");
             StoreItem newItem1 = new StoreItem("1", "1", 100);
-            StoreItem newItem2 = new StoreItem("1", "1", 13);
-            StoreItem newItem3 = new StoreItem("1", "1", 26);
+            StoreItem newItem2 = new StoreItem("2", "2", 13);
+            StoreItem newItem3 = new StoreItem("3", "3", 26);
             
             storeSection.AddItem(newItem1);
             storeSection.AddItem(newItem2);
