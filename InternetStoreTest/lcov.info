@@ -1,3 +1,264 @@
+SF:C:\Users\slavi\source\repos\InternetStore\InternetStore\CentralProcessingUnit.cs
+FN:9,System.String InternetStore.CentralProcessingUnit::get_Socket()
+FNDA:0,System.String InternetStore.CentralProcessingUnit::get_Socket()
+DA:10,0
+FN:10,System.Void InternetStore.CentralProcessingUnit::set_Socket(System.String)
+FNDA:0,System.Void InternetStore.CentralProcessingUnit::set_Socket(System.String)
+DA:11,0
+FN:14,System.Void InternetStore.CentralProcessingUnit::SetSocket(System.String)
+FNDA:0,System.Void InternetStore.CentralProcessingUnit::SetSocket(System.String)
+DA:15,0
+DA:16,0
+DA:17,0
+DA:18,0
+DA:19,0
+BRDA:16,7,0,0
+BRDA:16,7,1,0
+BRDA:16,25,0,0
+BRDA:16,25,1,0
+BRDA:17,54,0,0
+BRDA:17,54,1,0
+FN:21,System.String InternetStore.CentralProcessingUnit::GetSocket()
+FNDA:0,System.String InternetStore.CentralProcessingUnit::GetSocket()
+DA:22,0
+DA:23,0
+DA:24,0
+DA:25,0
+BRDA:23,12,0,0
+BRDA:23,12,1,0
+FN:30,System.String InternetStore.CentralProcessingUnit::get_ModelRow()
+FNDA:0,System.String InternetStore.CentralProcessingUnit::get_ModelRow()
+DA:31,0
+FN:31,System.Void InternetStore.CentralProcessingUnit::set_ModelRow(System.String)
+FNDA:0,System.Void InternetStore.CentralProcessingUnit::set_ModelRow(System.String)
+DA:32,0
+FN:35,System.Void InternetStore.CentralProcessingUnit::SetModelRow(System.String)
+FNDA:0,System.Void InternetStore.CentralProcessingUnit::SetModelRow(System.String)
+DA:36,0
+DA:37,0
+DA:38,0
+DA:39,0
+DA:40,0
+BRDA:37,7,0,0
+BRDA:37,7,1,0
+BRDA:37,25,0,0
+BRDA:37,25,1,0
+BRDA:38,49,0,0
+BRDA:38,49,1,0
+FN:42,System.String InternetStore.CentralProcessingUnit::GetModelRow()
+FNDA:0,System.String InternetStore.CentralProcessingUnit::GetModelRow()
+DA:43,0
+DA:44,0
+DA:45,0
+DA:46,0
+BRDA:44,12,0,0
+BRDA:44,12,1,0
+FN:51,System.Int32 InternetStore.CentralProcessingUnit::get_CoreCount()
+FNDA:0,System.Int32 InternetStore.CentralProcessingUnit::get_CoreCount()
+DA:52,0
+FN:52,System.Void InternetStore.CentralProcessingUnit::set_CoreCount(System.Int32)
+FNDA:0,System.Void InternetStore.CentralProcessingUnit::set_CoreCount(System.Int32)
+DA:53,0
+FN:56,System.Void InternetStore.CentralProcessingUnit::SetCoreCount(System.Int32)
+FNDA:0,System.Void InternetStore.CentralProcessingUnit::SetCoreCount(System.Int32)
+DA:57,0
+DA:58,0
+DA:59,0
+DA:60,0
+DA:61,0
+BRDA:58,7,0,0
+BRDA:58,7,1,0
+BRDA:58,18,0,0
+BRDA:58,18,1,0
+BRDA:59,38,0,0
+BRDA:59,38,1,0
+FN:63,System.Int32 InternetStore.CentralProcessingUnit::GetCoreCount()
+FNDA:0,System.Int32 InternetStore.CentralProcessingUnit::GetCoreCount()
+DA:64,0
+DA:65,0
+DA:66,0
+FN:71,InternetStore.DeliveryType InternetStore.CentralProcessingUnit::get_DeliveryType()
+FNDA:0,InternetStore.DeliveryType InternetStore.CentralProcessingUnit::get_DeliveryType()
+DA:72,0
+FN:72,System.Void InternetStore.CentralProcessingUnit::set_DeliveryType(InternetStore.DeliveryType)
+FNDA:0,System.Void InternetStore.CentralProcessingUnit::set_DeliveryType(InternetStore.DeliveryType)
+DA:73,0
+FN:76,System.Void InternetStore.CentralProcessingUnit::SetDeliveryType(InternetStore.DeliveryType)
+FNDA:0,System.Void InternetStore.CentralProcessingUnit::SetDeliveryType(InternetStore.DeliveryType)
+DA:77,0
+DA:78,0
+DA:79,0
+DA:80,0
+BRDA:78,20,0,0
+BRDA:78,20,1,0
+FN:82,InternetStore.DeliveryType InternetStore.CentralProcessingUnit::GetDeliveryType()
+FNDA:0,InternetStore.DeliveryType InternetStore.CentralProcessingUnit::GetDeliveryType()
+DA:83,0
+DA:84,0
+DA:85,0
+DA:86,0
+BRDA:84,20,0,0
+BRDA:84,20,1,0
+FN:91,System.String InternetStore.CentralProcessingUnit::get_CrystalCodeName()
+FNDA:0,System.String InternetStore.CentralProcessingUnit::get_CrystalCodeName()
+DA:92,0
+FN:92,System.Void InternetStore.CentralProcessingUnit::set_CrystalCodeName(System.String)
+FNDA:0,System.Void InternetStore.CentralProcessingUnit::set_CrystalCodeName(System.String)
+DA:93,0
+FN:96,System.Void InternetStore.CentralProcessingUnit::SetCrystalCodeName(System.String)
+FNDA:0,System.Void InternetStore.CentralProcessingUnit::SetCrystalCodeName(System.String)
+DA:97,0
+DA:98,0
+DA:99,0
+DA:100,0
+DA:101,0
+BRDA:98,7,0,0
+BRDA:98,7,1,0
+BRDA:98,25,0,0
+BRDA:98,25,1,0
+BRDA:99,49,0,0
+BRDA:99,49,1,0
+FN:103,System.String InternetStore.CentralProcessingUnit::GetCrystalCodeName()
+FNDA:0,System.String InternetStore.CentralProcessingUnit::GetCrystalCodeName()
+DA:104,0
+DA:105,0
+DA:106,0
+DA:107,0
+BRDA:105,12,0,0
+BRDA:105,12,1,0
+FN:112,System.Double InternetStore.CentralProcessingUnit::get_BaseFrequency()
+FNDA:0,System.Double InternetStore.CentralProcessingUnit::get_BaseFrequency()
+DA:113,0
+FN:113,System.Void InternetStore.CentralProcessingUnit::set_BaseFrequency(System.Double)
+FNDA:0,System.Void InternetStore.CentralProcessingUnit::set_BaseFrequency(System.Double)
+DA:114,0
+FN:117,System.Void InternetStore.CentralProcessingUnit::SetBaseFrequency(System.Double)
+FNDA:0,System.Void InternetStore.CentralProcessingUnit::SetBaseFrequency(System.Double)
+DA:118,0
+DA:119,0
+DA:120,0
+DA:121,0
+DA:122,0
+BRDA:119,16,0,0
+BRDA:119,16,1,0
+BRDA:119,35,0,0
+BRDA:119,35,1,0
+BRDA:120,63,0,0
+BRDA:120,63,1,0
+FN:124,System.Double InternetStore.CentralProcessingUnit::GetBaseFrequency()
+FNDA:0,System.Double InternetStore.CentralProcessingUnit::GetBaseFrequency()
+DA:125,0
+DA:126,0
+DA:127,0
+FN:132,System.Double InternetStore.CentralProcessingUnit::get_MaxFrequency()
+FNDA:0,System.Double InternetStore.CentralProcessingUnit::get_MaxFrequency()
+DA:133,0
+FN:133,System.Void InternetStore.CentralProcessingUnit::set_MaxFrequency(System.Double)
+FNDA:0,System.Void InternetStore.CentralProcessingUnit::set_MaxFrequency(System.Double)
+DA:134,0
+FN:137,System.Void InternetStore.CentralProcessingUnit::SetMaxFrequency(System.Double)
+FNDA:0,System.Void InternetStore.CentralProcessingUnit::SetMaxFrequency(System.Double)
+DA:138,0
+DA:139,0
+DA:140,0
+DA:141,0
+DA:142,0
+BRDA:139,16,0,0
+BRDA:139,16,1,0
+BRDA:139,35,0,0
+BRDA:139,35,1,0
+BRDA:140,63,0,0
+BRDA:140,63,1,0
+FN:144,System.Double InternetStore.CentralProcessingUnit::GetMaxFrequency()
+FNDA:0,System.Double InternetStore.CentralProcessingUnit::GetMaxFrequency()
+DA:145,0
+DA:146,0
+DA:147,0
+FN:152,System.Boolean InternetStore.CentralProcessingUnit::get_SupportsMultithreading()
+FNDA:0,System.Boolean InternetStore.CentralProcessingUnit::get_SupportsMultithreading()
+DA:153,0
+FN:153,System.Void InternetStore.CentralProcessingUnit::set_SupportsMultithreading(System.Boolean)
+FNDA:0,System.Void InternetStore.CentralProcessingUnit::set_SupportsMultithreading(System.Boolean)
+DA:154,0
+FN:157,System.Void InternetStore.CentralProcessingUnit::SetSupportsMultiThreading(System.Boolean)
+FNDA:0,System.Void InternetStore.CentralProcessingUnit::SetSupportsMultiThreading(System.Boolean)
+DA:158,0
+DA:159,0
+DA:160,0
+DA:161,0
+BRDA:159,20,0,0
+BRDA:159,20,1,0
+FN:163,System.Boolean InternetStore.CentralProcessingUnit::GetSupportsMultiThreading()
+FNDA:0,System.Boolean InternetStore.CentralProcessingUnit::GetSupportsMultiThreading()
+DA:164,0
+DA:165,0
+DA:166,0
+DA:167,0
+BRDA:165,20,0,0
+BRDA:165,20,1,0
+FN:172,System.Double InternetStore.CentralProcessingUnit::get_ThermalDesignPower()
+FNDA:0,System.Double InternetStore.CentralProcessingUnit::get_ThermalDesignPower()
+DA:173,0
+FN:173,System.Void InternetStore.CentralProcessingUnit::set_ThermalDesignPower(System.Double)
+FNDA:0,System.Void InternetStore.CentralProcessingUnit::set_ThermalDesignPower(System.Double)
+DA:174,0
+FN:177,System.Void InternetStore.CentralProcessingUnit::SetThermalDesignPower(System.Double)
+FNDA:0,System.Void InternetStore.CentralProcessingUnit::SetThermalDesignPower(System.Double)
+DA:178,0
+DA:179,0
+DA:180,0
+DA:181,0
+DA:182,0
+BRDA:179,16,0,0
+BRDA:179,16,1,0
+BRDA:179,35,0,0
+BRDA:179,35,1,0
+BRDA:180,63,0,0
+BRDA:180,63,1,0
+FN:184,System.Double InternetStore.CentralProcessingUnit::GetThermalDesignPower()
+FNDA:0,System.Double InternetStore.CentralProcessingUnit::GetThermalDesignPower()
+DA:185,0
+DA:186,0
+DA:187,0
+FN:192,System.String InternetStore.CentralProcessingUnit::get_SupportedRandomAccessMemoryType()
+FNDA:0,System.String InternetStore.CentralProcessingUnit::get_SupportedRandomAccessMemoryType()
+DA:193,0
+FN:193,System.Void InternetStore.CentralProcessingUnit::set_SupportedRandomAccessMemoryType(System.String)
+FNDA:0,System.Void InternetStore.CentralProcessingUnit::set_SupportedRandomAccessMemoryType(System.String)
+DA:194,0
+FN:197,System.Void InternetStore.CentralProcessingUnit::SetSupportedRandomAccessMemoryType(System.String)
+FNDA:0,System.Void InternetStore.CentralProcessingUnit::SetSupportedRandomAccessMemoryType(System.String)
+DA:198,0
+DA:199,0
+DA:200,0
+DA:201,0
+DA:202,0
+BRDA:199,7,0,0
+BRDA:199,7,1,0
+BRDA:199,25,0,0
+BRDA:199,25,1,0
+BRDA:200,54,0,0
+BRDA:200,54,1,0
+FN:204,System.String InternetStore.CentralProcessingUnit::GetSupportedRandomAccessMemoryType()
+FNDA:0,System.String InternetStore.CentralProcessingUnit::GetSupportedRandomAccessMemoryType()
+DA:205,0
+DA:206,0
+DA:207,0
+DA:208,0
+BRDA:206,12,0,0
+BRDA:206,12,1,0
+FN:209,System.Void InternetStore.CentralProcessingUnit::.ctor(System.String,System.String,System.Decimal)
+FNDA:0,System.Void InternetStore.CentralProcessingUnit::.ctor(System.String,System.String,System.Decimal)
+DA:210,0
+DA:211,0
+DA:213,0
+LF:107
+LH:0
+BRF:64
+BRH:0
+FNF:41
+FNH:0
+end_of_record
 SF:C:\Users\slavi\source\repos\InternetStore\InternetStore\IncorrectStoreItemIdException.cs
 FN:4,System.String InternetStore.IncorrectStoreItemIdException::get_Message()
 FNDA:1,System.String InternetStore.IncorrectStoreItemIdException::get_Message()
@@ -137,24 +398,60 @@ DA:7,15
 FN:8,System.Decimal InternetStore.StoreItem::get_Price()
 FNDA:10,System.Decimal InternetStore.StoreItem::get_Price()
 DA:9,10
-FN:10,System.Void InternetStore.StoreItem::.ctor(System.String,System.String,System.Decimal)
+FN:14,System.String InternetStore.StoreItem::get_Manufacturer()
+FNDA:0,System.String InternetStore.StoreItem::get_Manufacturer()
+DA:15,0
+FN:15,System.Void InternetStore.StoreItem::set_Manufacturer(System.String)
+FNDA:0,System.Void InternetStore.StoreItem::set_Manufacturer(System.String)
+DA:16,0
+FN:19,System.Void InternetStore.StoreItem::SetManufacturer(System.String)
+FNDA:0,System.Void InternetStore.StoreItem::SetManufacturer(System.String)
+DA:20,0
+DA:21,0
+DA:22,0
+DA:23,0
+DA:24,0
+BRDA:21,7,0,0
+BRDA:21,7,1,0
+BRDA:21,25,0,0
+BRDA:21,25,1,0
+BRDA:22,49,0,0
+BRDA:22,49,1,0
+FN:26,System.String InternetStore.StoreItem::GetManufacturer()
+FNDA:0,System.String InternetStore.StoreItem::GetManufacturer()
+DA:27,0
+DA:28,0
+DA:29,0
+DA:30,0
+BRDA:28,12,0,0
+BRDA:28,12,1,0
+FN:44,System.String InternetStore.StoreItem::ToString()
+FNDA:0,System.String InternetStore.StoreItem::ToString()
+DA:45,0
+DA:46,0
+DA:47,0
+DA:48,0
+DA:49,0
+BRDA:47,114,0,0
+BRDA:47,114,1,0
+FN:31,System.Void InternetStore.StoreItem::.ctor(System.String,System.String,System.Decimal)
 FNDA:8,System.Void InternetStore.StoreItem::.ctor(System.String,System.String,System.Decimal)
-DA:11,8
-DA:12,8
-DA:13,8
-DA:14,1
-DA:15,1
-DA:18,7
-DA:19,7
-DA:20,7
-DA:21,7
-BRDA:13,21,0,1
-BRDA:13,21,1,7
-LF:12
+DA:32,8
+DA:33,8
+DA:34,8
+DA:35,1
+DA:36,1
+DA:39,7
+DA:40,7
+DA:41,7
+DA:42,7
+BRDA:34,21,0,1
+BRDA:34,21,1,7
+LF:28
 LH:12
-BRF:2
+BRF:12
 BRH:2
-FNF:4
+FNF:9
 FNH:4
 end_of_record
 SF:C:\Users\slavi\source\repos\InternetStore\InternetStore\StoreSection.cs
