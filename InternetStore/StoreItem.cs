@@ -10,6 +10,11 @@ public class StoreItem
 
     public StoreItem(string name, string id, decimal price)
     {
+        if (price < 0)
+        {
+            throw new StoreItemIncorrectPriceException();
+        }
+        
         Name = name;
         Id = id;
         Price = price;

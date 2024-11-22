@@ -12,6 +12,15 @@ namespace InternetStoreTest
             StoreItem newItem1 = new StoreItem("1", "1", 100);
             StoreItem newItem2 = new StoreItem("1", "1", 13);
             StoreItem newItem3 = new StoreItem("1", "1", 26);
+
+            try
+            {
+
+            }
+            catch (StoreItemIncorrectPriceException exception)
+            {
+                Assert.AreEqual(exception.Message, "Price must be greater than zero");
+            }
             StoreItem newItem4 = new StoreItem("1", "1", -10);
             
             storeSection.AddItem(newItem1);
@@ -23,9 +32,8 @@ namespace InternetStoreTest
             List<StoreItem> filteredItemsTest = new List<StoreItem>();
             filteredItemsTest.Add(newItem2);
             filteredItemsTest.Add(newItem3);
-            filteredItemsTest.Add(newItem4); // ?
 
-            Assert.AreEqual(filteredItems, filteredItemsTest);
+            Assert.AreEqual(ItemsFilter.CheckCollectionsAreTheSame(filteredItems, filteredItemsTest), true);
         }
     }
 }

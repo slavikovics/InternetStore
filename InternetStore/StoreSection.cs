@@ -22,14 +22,4 @@ public class StoreSection
         Id = id;
         Items = new List<StoreItem>();
     }
-
-    public bool CheckCollectionsAreTheSame(List<StoreItem> items)
-    {
-        foreach (StoreItem item in Items)
-        {
-            if (!items.Contains(item)) return false;
-        }
-        
-        return true;
-    }
 }

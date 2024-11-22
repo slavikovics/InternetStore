@@ -41,4 +41,14 @@ public static class ItemsFilter
         
         return firstPrice >= secondPrice;    
     }
+    
+    public static bool CheckCollectionsAreTheSame(List<StoreItem> items1, List<StoreItem> items2 )
+    {
+        foreach (StoreItem item in items1)
+        {
+            if (!items2.Contains(item)) return false;
+        }
+        
+        return true;
+    }
 }
