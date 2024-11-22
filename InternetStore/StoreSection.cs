@@ -10,7 +10,7 @@ public class StoreSection
 
     public List<StoreItem> Items { get; private set; }
 
-    public void AddItem(StoreItem item)
+    public virtual void AddItem(StoreItem item)
     {
         CheckIsNameUnique(item);
         CheckIsIdUnique(item);
@@ -25,7 +25,7 @@ public class StoreSection
         Items = new List<StoreItem>();
     }
 
-    public void CheckIsNameUnique(StoreItem storeItem)
+    private void CheckIsNameUnique(StoreItem storeItem)
     {
         foreach (StoreItem item in Items)
         {
@@ -33,7 +33,7 @@ public class StoreSection
         }
     }
 
-    public void CheckIsIdUnique(StoreItem storeItem)
+    private void CheckIsIdUnique(StoreItem storeItem)
     {
         foreach (StoreItem item in Items)
         {
