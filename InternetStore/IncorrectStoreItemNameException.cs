@@ -6,6 +6,6 @@ public class IncorrectStoreItemNameException : Exception
     
     public IncorrectStoreItemNameException()
     {
-        Message = "Name must be unique in StoreSection";
+        Message = "Item Name must be unique in StoreSection";
     }
 }

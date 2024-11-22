@@ -6,6 +6,6 @@ public class IncorrectStoreItemPriceException : Exception
     
     public IncorrectStoreItemPriceException()
     {
-        Message = "Price must be greater than zero";
+        Message = "Item Price must be greater than zero";
     }
 }

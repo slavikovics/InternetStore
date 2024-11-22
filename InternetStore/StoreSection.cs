@@ -12,6 +12,8 @@ public class StoreSection
 
     public void AddItem(StoreItem item)
     {
+        CheckIsNameUnique(item);
+        CheckIsIdUnique(item);
         Items.Add(item);
     }
 
@@ -23,7 +25,7 @@ public class StoreSection
         Items = new List<StoreItem>();
     }
 
-    public void IsNameUnique(StoreItem storeItem)
+    public void CheckIsNameUnique(StoreItem storeItem)
     {
         foreach (StoreItem item in Items)
         {
@@ -31,7 +33,7 @@ public class StoreSection
         }
     }
 
-    public void IsIdUnique(StoreItem storeItem)
+    public void CheckIsIdUnique(StoreItem storeItem)
     {
         foreach (StoreItem item in Items)
         {

@@ -6,6 +6,6 @@ public class IncorrectStoreItemIdException : Exception
     
     public IncorrectStoreItemIdException()
     {
-        Message = "Id must be unique in StoreSection";
+        Message = "Item Id must be unique in StoreSection";
     }
 }
