@@ -15,18 +15,17 @@ namespace InternetStoreTest
 
             try
             {
-
+                StoreItem newItem4 = new StoreItem("1", "1", -10);
+                storeSection.AddItem(newItem4);
             }
-            catch (StoreItemIncorrectPriceException exception)
+            catch (IncorrectStoreItemPriceException exception)
             {
                 Assert.AreEqual(exception.Message, "Price must be greater than zero");
             }
-            StoreItem newItem4 = new StoreItem("1", "1", -10);
             
             storeSection.AddItem(newItem1);
             storeSection.AddItem(newItem2);
             storeSection.AddItem(newItem3);
-            storeSection.AddItem(newItem4);
             
             List<StoreItem> filteredItems = ItemsFilter.FilterByPrice(storeSection.Items, 30);
             List<StoreItem> filteredItemsTest = new List<StoreItem>();

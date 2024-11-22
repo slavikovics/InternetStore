@@ -12,7 +12,7 @@ public class StoreItem
     {
         if (price < 0)
         {
-            throw new StoreItemIncorrectPriceException();
+            throw new IncorrectStoreItemPriceException();
         }
         
         Name = name;

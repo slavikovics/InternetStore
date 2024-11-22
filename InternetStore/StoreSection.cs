@@ -22,4 +22,20 @@ public class StoreSection
         Id = id;
         Items = new List<StoreItem>();
     }
+
+    public void IsNameUnique(StoreItem storeItem)
+    {
+        foreach (StoreItem item in Items)
+        {
+            if (item.Name == storeItem.Name) throw new IncorrectStoreItemNameException();
+        }
+    }
+
+    public void IsIdUnique(StoreItem storeItem)
+    {
+        foreach (StoreItem item in Items)
+        {
+            if (item.Id == storeItem.Id) throw new IncorrectStoreItemIdException();
+        }
+    }
 }
