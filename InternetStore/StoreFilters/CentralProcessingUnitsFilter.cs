@@ -61,4 +61,16 @@ public static class CentralProcessingUnitsFilter
         
         centralProcessingUnits.Sort();
     }
+
+    public static List<CentralProcessingUnit> FindCentralProcessingUnitsBySocket(List<CentralProcessingUnit> processors, string socket)
+    {
+        List<CentralProcessingUnit> result = new List<CentralProcessingUnit>();
+
+        foreach (CentralProcessingUnit centralProcessingUnit in processors)
+        {
+            if (centralProcessingUnit.Socket == socket) result.Add(centralProcessingUnit);
+        }
+
+        return result;
+    }
 }

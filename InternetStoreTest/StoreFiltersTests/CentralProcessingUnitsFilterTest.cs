@@ -176,4 +176,30 @@ public class CentralProcessingUnitsFilterTest
         
         Assert.AreEqual(ItemsFilter.CheckCollectionsAreEqual(cpus, cpusExpectedResult), true);
     }
+    
+    [TestMethod]
+    public void TestMethodFindCentralProcessingUnitsBySocket()
+    {
+        CentralProcessingUnit cpu1 = new CentralProcessingUnit("1", "1", new decimal(450.6));
+        CentralProcessingUnit cpu2 = new CentralProcessingUnit("2", "2", new decimal(350.6));
+        CentralProcessingUnit cpu3 = new CentralProcessingUnit("3", "3", new decimal(950.6));
+
+        cpu1.Socket = "AM4";
+        cpu2.Socket = "AM5";
+        cpu3.Socket = "AM4";
+        
+        List<CentralProcessingUnit> cpus = new List<CentralProcessingUnit>();
+        cpus.Add(cpu1);
+        cpus.Add(cpu2);
+        cpus.Add(cpu3);
+
+        List<CentralProcessingUnit> cpusExpectedResult =
+        [
+            cpu1,
+            cpu3
+        ];
+
+        Assert.AreEqual(ItemsFilter.CheckCollectionsHaveTheSameElements(CentralProcessingUnitsFilter.FindCentralProcessingUnitsBySocket(cpus, "AM4"), cpusExpectedResult), true);
+
+    }
 }
