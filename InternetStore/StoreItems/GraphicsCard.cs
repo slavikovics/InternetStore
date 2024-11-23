@@ -66,6 +66,26 @@ public class GraphicsCard : StoreItem
         return _videoMemorySize;
     }
     
+    private double _thermalDesignPower;
+    
+    public double ThermalDesignPower
+    {
+        get => GetThermalDesignPower();
+        set => SetThermalDesignPower(value);
+    }
+    
+    private void SetThermalDesignPower(double value)
+    {
+        if (_thermalDesignPower == 0 && value > 0) _thermalDesignPower = value;
+        else if (value <= 0) throw new ArgumentException("Thermal design power cannot be less or equal to zero.");
+        else throw new InvalidOperationException("Thermal design power is already set.");
+    }
+    
+    private double GetThermalDesignPower()
+    {
+        return _thermalDesignPower;
+    }
+    
     public override int CompareTo(object obj)
     {
         switch (SortingParameters)
