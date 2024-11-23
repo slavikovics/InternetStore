@@ -1,6 +1,6 @@
 ﻿namespace InternetStore;
 
-public class StoreItem
+public class StoreItem : IComparable
 {
     public string Name { get; private set; }
     
@@ -46,5 +46,15 @@ public class StoreItem
         string response = $"{Id}. {Name} Price: {Price} ";
         if (_manufacturer is not null) response += $"Manufacturer: {_manufacturer}";
         return response;
+    }
+
+    public virtual int CompareTo(object obj)
+    {
+        if (obj is not StoreItem) throw new ArgumentException("Object is not a StoreItem.");
+        
+        StoreItem storeItem = (StoreItem)obj;
+        if (storeItem.Price < Price) return 1;
+        if (storeItem.Price == Price) return 0;
+        return -1;
     }
 }

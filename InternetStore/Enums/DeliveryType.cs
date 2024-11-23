@@ -2,5 +2,10 @@
 
 public enum DeliveryType
 {
-    Oem, Box, Wof, Woz, Multipack, None 
+    Oem, 
+    Box, 
+    Wof, 
+    Woz, 
+    Multipack, 
+    None 
 }

@@ -25,6 +25,16 @@ namespace InternetStoreTest
             ];
 
             Assert.AreEqual(ItemsFilter.CheckCollectionsAreTheSame(filteredItems, filteredItemsTest), true);
+            
+            ItemsFilter.SortByPrice(filteredItemsTest);
+            List<StoreItem> sortedItemsTest =
+            [
+                newItem2,
+                newItem3,
+                newItem1
+            ];
+            
+            Assert.AreEqual(ItemsFilter.CheckCollectionsAreTheSame(storeSection.Items, sortedItemsTest), true);
         }
     }
 }

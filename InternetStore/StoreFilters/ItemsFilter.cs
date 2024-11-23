@@ -32,6 +32,25 @@ public static class ItemsFilter
         return filteredStoreItems;
     }
 
+    public static StoreItem FindBestByPrice(List<StoreItem> storeItems)
+    {
+        if (storeItems.Count == 0) throw new ArgumentException("No store items found.");
+        
+        decimal bestPrice = storeItems[0].Price;
+        StoreItem bestItem = storeItems[0];
+
+        foreach (StoreItem item in storeItems)
+        {
+            if (item.Price > bestPrice)
+            {
+                bestPrice = item.Price;
+                bestItem = item;
+            }
+        }
+        
+        return bestItem;
+    }
+
     public static bool ComparePrices(decimal firstPrice, decimal secondPrice, bool lowerThan)
     {
         if (lowerThan)
@@ -40,6 +59,12 @@ public static class ItemsFilter
         }
         
         return firstPrice >= secondPrice;    
+    }
+
+    public static void SortByPrice(List<StoreItem> storeItems)
+    {
+        storeItems.Sort();
+        return;
     }
     
     public static bool CheckCollectionsAreTheSame(List<StoreItem> items1, List<StoreItem> items2 )
