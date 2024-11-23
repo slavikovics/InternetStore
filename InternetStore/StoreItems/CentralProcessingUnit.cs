@@ -2,7 +2,8 @@
 
 public class CentralProcessingUnit : StoreItem
 {
-    
+    public CentralProcessingUnitSortingParameters SortingParameters { get; set; }
+
     private string? _socket;
 
     public string Socket
@@ -207,8 +208,83 @@ public class CentralProcessingUnit : StoreItem
         return _supportedRandomAccessMemoryType;
     }
 
+    public override int CompareTo(object obj)
+    {
+        switch (SortingParameters)
+        {
+            case CentralProcessingUnitSortingParameters.Price: return ComparerByPrice(obj);
+            case CentralProcessingUnitSortingParameters.CoreCount: return ComparerByCoreCount(obj);
+            case CentralProcessingUnitSortingParameters.BaseFrequency: return ComparerByBaseFrequency(obj);
+            case CentralProcessingUnitSortingParameters.MaxFrequency: return ComparerByMaxFrequency(obj);
+            case CentralProcessingUnitSortingParameters.SupportsMultithreading: return ComparerBySupportsMultithreading(obj);
+            case CentralProcessingUnitSortingParameters.ThermalDesignPower: return ComparerByThermalDesignPower(obj);
+        }
+        
+        return base.CompareTo(obj);
+    }
+
+    private int ComparerByPrice(object obj)
+    {
+        if (obj is not CentralProcessingUnit) throw new ArgumentException("Object is not a CentralProcessingUnit.");
+        
+        CentralProcessingUnit storeItem = (CentralProcessingUnit)obj;
+        if (storeItem.Price < Price) return 1;
+        if (storeItem.Price == Price) return 0;
+        return -1;
+    }
+    
+    private int ComparerByCoreCount(object obj)
+    {
+        if (obj is not CentralProcessingUnit) throw new ArgumentException("Object is not a CentralProcessingUnit.");
+        
+        CentralProcessingUnit storeItem = (CentralProcessingUnit)obj;
+        if (storeItem.CoreCount < CoreCount) return -1;
+        if (storeItem.CoreCount == CoreCount) return 0;
+        return 1;
+    }
+    
+    private int ComparerByBaseFrequency(object obj)
+    {
+        if (obj is not CentralProcessingUnit) throw new ArgumentException("Object is not a CentralProcessingUnit.");
+        
+        CentralProcessingUnit storeItem = (CentralProcessingUnit)obj;
+        if (storeItem.BaseFrequency < BaseFrequency) return -1;
+        if (Math.Abs(storeItem.BaseFrequency - BaseFrequency) < 0.001) return 0;
+        return 1;
+    }
+    
+    private int ComparerByMaxFrequency(object obj)
+    {
+        if (obj is not CentralProcessingUnit) throw new ArgumentException("Object is not a CentralProcessingUnit.");
+        
+        CentralProcessingUnit storeItem = (CentralProcessingUnit)obj;
+        if (storeItem.MaxFrequency < MaxFrequency) return -1;
+        if (Math.Abs(storeItem.MaxFrequency - MaxFrequency) < 0.001) return 0;
+        return 1;
+    }
+    
+    private int ComparerBySupportsMultithreading(object obj)
+    {
+        if (obj is not CentralProcessingUnit) throw new ArgumentException("Object is not a CentralProcessingUnit.");
+        
+        CentralProcessingUnit storeItem = (CentralProcessingUnit)obj;
+        if (!storeItem.SupportsMultithreading && SupportsMultithreading) return -1;
+        if (storeItem.SupportsMultithreading && SupportsMultithreading || !storeItem.SupportsMultithreading && !SupportsMultithreading) return 0;
+        return 1;
+    }
+    
+    private int ComparerByThermalDesignPower(object obj)
+    {
+        if (obj is not CentralProcessingUnit) throw new ArgumentException("Object is not a CentralProcessingUnit.");
+        
+        CentralProcessingUnit storeItem = (CentralProcessingUnit)obj;
+        if (storeItem.ThermalDesignPower < ThermalDesignPower) return 1;
+        if (Math.Abs(storeItem.ThermalDesignPower - ThermalDesignPower) < 0.001) return 0;
+        return -1;
+    }
+
     public CentralProcessingUnit(string name, string id, decimal price) : base(name, id, price)
     {
-        
+        SortingParameters = CentralProcessingUnitSortingParameters.Price;
     }
 }

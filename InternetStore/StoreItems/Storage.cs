@@ -2,6 +2,8 @@
 
 public class Storage : StoreItem
 {
+    public StorageSortingParameters SortingParameters { get; set; }
+    
     private string? _memoryType;
 
     public string MemoryType
@@ -43,8 +45,39 @@ public class Storage : StoreItem
         return _memorySize;
     }
     
+    public override int CompareTo(object obj)
+    {
+        switch (SortingParameters)
+        {
+            case StorageSortingParameters.Price: return ComparerByPrice(obj);
+            case StorageSortingParameters.MemorySize: return ComparerByMemorySize(obj);
+        }
+        
+        return base.CompareTo(obj);
+    }
+    
+    private int ComparerByPrice(object obj)
+    {
+        if (obj is not Storage) throw new ArgumentException("Object is not a Storage.");
+        
+        Storage storeItem = (Storage)obj;
+        if (storeItem.Price < Price) return 1;
+        if (storeItem.Price == Price) return 0;
+        return -1;
+    }
+    
+    private int ComparerByMemorySize(object obj)
+    {
+        if (obj is not Storage) throw new ArgumentException("Object is not a Storage.");
+        
+        Storage storeItem = (Storage)obj;
+        if (storeItem.MemorySize < MemorySize) return -1;
+        if (storeItem.MemorySize == MemorySize) return 0;
+        return 1;
+    }
+    
     public Storage(string name, string id, decimal price) : base(name, id, price)
     {
-        
+        SortingParameters = StorageSortingParameters.Price;
     }
 }

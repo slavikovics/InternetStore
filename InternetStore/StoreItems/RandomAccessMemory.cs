@@ -2,6 +2,8 @@
 
 public class RandomAccessMemory : StoreItem
 {
+    public RandomAccessMemorySortingParameters SortingParameters { get; set; }
+    
     private string? _memoryType;
 
     public string MemoryType
@@ -43,8 +45,39 @@ public class RandomAccessMemory : StoreItem
         return _memorySize;
     }
     
+    public override int CompareTo(object obj)
+    {
+        switch (SortingParameters)
+        {
+            case RandomAccessMemorySortingParameters.Price: return ComparerByPrice(obj);
+            case RandomAccessMemorySortingParameters.MemorySize: return ComparerByMemorySize(obj);
+        }
+        
+        return base.CompareTo(obj);
+    }
+    
+    private int ComparerByPrice(object obj)
+    {
+        if (obj is not RandomAccessMemory) throw new ArgumentException("Object is not a RandomAccessMemory.");
+        
+        RandomAccessMemory storeItem = (RandomAccessMemory)obj;
+        if (storeItem.Price < Price) return 1;
+        if (storeItem.Price == Price) return 0;
+        return -1;
+    }
+    
+    private int ComparerByMemorySize(object obj)
+    {
+        if (obj is not RandomAccessMemory) throw new ArgumentException("Object is not a RandomAccessMemory.");
+        
+        RandomAccessMemory storeItem = (RandomAccessMemory)obj;
+        if (storeItem.MemorySize < MemorySize) return -1;
+        if (storeItem.MemorySize == MemorySize) return 0;
+        return 1;
+    }
+    
     public RandomAccessMemory(string name, string id, decimal price) : base(name, id, price)
     {
-        
+        SortingParameters = RandomAccessMemorySortingParameters.Price;
     }
 }

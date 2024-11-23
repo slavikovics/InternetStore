@@ -2,6 +2,8 @@
 
 public class GraphicsCard : StoreItem
 {
+    public GraphicsCardSortingParameters SortingParameters { get; set; }
+    
     private string? _videoMemoryType;
 
     public string VideoMemoryType
@@ -64,8 +66,39 @@ public class GraphicsCard : StoreItem
         return _videoMemorySize;
     }
     
+    public override int CompareTo(object obj)
+    {
+        switch (SortingParameters)
+        {
+            case GraphicsCardSortingParameters.Price: return ComparerByPrice(obj);
+            case GraphicsCardSortingParameters.VideoMemorySize: return ComparerByVideoMemorySize(obj);
+        }
+        
+        return base.CompareTo(obj);
+    }
+
+    private int ComparerByPrice(object obj)
+    {
+        if (obj is not GraphicsCard) throw new ArgumentException("Object is not a GraphicsCard.");
+        
+        GraphicsCard storeItem = (GraphicsCard)obj;
+        if (storeItem.Price < Price) return 1;
+        if (storeItem.Price == Price) return 0;
+        return -1;
+    }
+    
+    private int ComparerByVideoMemorySize(object obj)
+    {
+        if (obj is not GraphicsCard) throw new ArgumentException("Object is not a GraphicsCard.");
+        
+        GraphicsCard storeItem = (GraphicsCard)obj;
+        if (storeItem.VideoMemorySize < VideoMemorySize) return -1;
+        if (Math.Abs(storeItem.VideoMemorySize - VideoMemorySize) < 0.001) return 0;
+        return 1;
+    }
+    
     public GraphicsCard(string name, string id, decimal price) : base(name, id, price)
     {
-        
+        SortingParameters = GraphicsCardSortingParameters.Price;
     }
 }

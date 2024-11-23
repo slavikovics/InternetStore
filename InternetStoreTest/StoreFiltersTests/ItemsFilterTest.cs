@@ -24,7 +24,7 @@ namespace InternetStoreTest
                 newItem3
             ];
 
-            Assert.AreEqual(ItemsFilter.CheckCollectionsAreTheSame(filteredItems, filteredItemsTest), true);
+            Assert.AreEqual(ItemsFilter.CheckCollectionsHaveTheSameElements(filteredItems, filteredItemsTest), true);
             
             ItemsFilter.SortByPrice(filteredItemsTest);
             List<StoreItem> sortedItemsTest =
@@ -34,7 +34,7 @@ namespace InternetStoreTest
                 newItem1
             ];
             
-            Assert.AreEqual(ItemsFilter.CheckCollectionsAreTheSame(storeSection.Items, sortedItemsTest), true);
+            Assert.AreEqual(ItemsFilter.CheckCollectionsHaveTheSameElements(storeSection.Items, sortedItemsTest), true);
         }
     }
 }

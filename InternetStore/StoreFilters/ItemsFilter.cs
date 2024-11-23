@@ -67,11 +67,23 @@ public static class ItemsFilter
         return;
     }
     
-    public static bool CheckCollectionsAreTheSame(List<StoreItem> items1, List<StoreItem> items2 )
+    public static bool CheckCollectionsHaveTheSameElements<T>(List<T> items1, List<T> items2 )
     {
-        foreach (StoreItem item in items1)
+        foreach (T item in items1)
         {
             if (!items2.Contains(item)) return false;
+        }
+        
+        return true;
+    }
+
+    public static bool CheckCollectionsAreEqual<T>(List<T> items1, List<T> items2)
+    {
+        if (items1.Count != items2.Count) return false;
+
+        for (int i = 0; i < items1.Count; i++)
+        {
+            if (!items1[i].Equals(items2[i])) return false;
         }
         
         return true;
