@@ -1,8 +1,12 @@
 
+using InternetStore;
+
 namespace InternetStoreWebApp
 {
     public class Program
     {
+        static List<PowerSupply> powerSupplies = new List<PowerSupply>();
+ 
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
