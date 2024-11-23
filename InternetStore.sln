@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35506.116 d17.12
+VisualStudioVersion = 17.12.35506.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternetStore", "InternetStore\InternetStore.csproj", "{E4DE6356-9279-438B-80C9-ADE3ED363C7E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternetStoreTests", "InternetStoreTest\InternetStoreTests.csproj", "{EB6E3EAC-B29C-45FA-A35D-618A8B98BB08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternetStoreWebApp", "InternetStoreWebApp\InternetStoreWebApp.csproj", "{101BDCFC-8F00-466D-9042-7A57028D1F0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{EB6E3EAC-B29C-45FA-A35D-618A8B98BB08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB6E3EAC-B29C-45FA-A35D-618A8B98BB08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB6E3EAC-B29C-45FA-A35D-618A8B98BB08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{101BDCFC-8F00-466D-9042-7A57028D1F0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{101BDCFC-8F00-466D-9042-7A57028D1F0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{101BDCFC-8F00-466D-9042-7A57028D1F0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{101BDCFC-8F00-466D-9042-7A57028D1F0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
