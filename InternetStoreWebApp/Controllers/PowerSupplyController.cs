@@ -13,28 +13,29 @@ namespace InternetStoreWebApp.Controllers
         public TestLists TestLists = new TestLists();
 
         // GET: api/<GetAllPowerSupplies>
-        [HttpGet]
+        [HttpGet("GetAllPowerSupplies")]
         public IEnumerable<PowerSupply> Get()
         {
             return TestLists.powerSupplies;
         }
 
         // GET api/<PowerSupplyController>/5
-        [HttpGet("{id}")]
+        [HttpGet("GetPowerSupplyByID")]
         public PowerSupply Get(string id)
         {
             return PowerSuppliesFilter.FindPowerSupplyById(TestLists.powerSupplies, id);
         }
 
         // POST api/<PowerSupplyController>
-        [HttpPost]
-        public void Post([FromBody] PowerSupply value)
+        [HttpPost("PostPowerSupply")]
+        public void Post(string name, string id, decimal price)
         {
-            TestLists.powerSupplies.Add(value);
+            PowerSupply powerSupply = new PowerSupply(name, id, price);
+            TestLists.powerSupplies.Add(powerSupply);
         }
 
         // DELETE api/<PowerSupplyController>/5
-        [HttpDelete("{id}")]
+        [HttpDelete("DeletePowerSupply")]
         public void Delete(string id)
         {
            TestLists.powerSupplies.Remove(PowerSuppliesFilter.FindPowerSupplyById(TestLists.powerSupplies, id));
