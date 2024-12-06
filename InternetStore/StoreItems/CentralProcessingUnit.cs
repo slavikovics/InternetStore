@@ -2,8 +2,6 @@
 
 public class CentralProcessingUnit : StoreItem
 {
-    public int Id { get; set; }
-
     public CentralProcessingUnitSortingParameters SortingParameters { get; set; }
 
     private string? _socket;
@@ -285,7 +283,7 @@ public class CentralProcessingUnit : StoreItem
         return -1;
     }
 
-    public CentralProcessingUnit(string name, string id, decimal price) : base(name, id, price)
+    public CentralProcessingUnit(string name, int id, decimal price) : base(name, id, price)
     {
         SortingParameters = CentralProcessingUnitSortingParameters.Price;
     }

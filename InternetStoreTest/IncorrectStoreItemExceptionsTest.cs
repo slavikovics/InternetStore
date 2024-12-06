@@ -12,9 +12,9 @@ public sealed class IncorrectStoreItemExceptionsTest
         
         try
         {
-            StoreItem newItem4 = new StoreItem("1", "1", 10);
+            StoreItem newItem4 = new StoreItem("1", 1, 10);
             storeSection.AddItem(newItem4);
-            StoreItem newItem5 = new StoreItem("2", "1", 10);
+            StoreItem newItem5 = new StoreItem("2", 1, 10);
             storeSection.AddItem(newItem5);
         }
         catch (Exception exception)
@@ -30,9 +30,9 @@ public sealed class IncorrectStoreItemExceptionsTest
         
         try
         {
-            StoreItem newItem4 = new StoreItem("1", "1", 10);
+            StoreItem newItem4 = new StoreItem("1", 1, 10);
             storeSection.AddItem(newItem4);
-            StoreItem newItem5 = new StoreItem("1", "2", 10);
+            StoreItem newItem5 = new StoreItem("1", 2, 10);
             storeSection.AddItem(newItem5);
         }
         catch (Exception exception)
@@ -48,7 +48,7 @@ public sealed class IncorrectStoreItemExceptionsTest
         
         try
         {
-            StoreItem newItem4 = new StoreItem("1", "1", -10);
+            StoreItem newItem4 = new StoreItem("1", 1, -10);
             storeSection.AddItem(newItem4);
         }
         catch (Exception exception)

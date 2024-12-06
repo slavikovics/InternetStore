@@ -117,7 +117,7 @@ public class GraphicsCard : StoreItem
         return 1;
     }
     
-    public GraphicsCard(string name, string id, decimal price) : base(name, id, price)
+    public GraphicsCard(string name, int id, decimal price) : base(name, id, price)
     {
         SortingParameters = GraphicsCardSortingParameters.Price;
     }

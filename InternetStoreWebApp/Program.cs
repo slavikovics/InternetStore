@@ -1,5 +1,6 @@
 
 using InternetStore;
+using Microsoft.EntityFrameworkCore;
 
 namespace InternetStoreWebApp
 {
@@ -12,7 +13,8 @@ namespace InternetStoreWebApp
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
+            builder.Services.AddDbContext<Context>(options => options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=MyDatabase;Trusted_Connection=True;MultipleActiveResultSets=true"));
+            
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

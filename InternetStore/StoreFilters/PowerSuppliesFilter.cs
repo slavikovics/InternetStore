@@ -8,7 +8,7 @@ namespace InternetStore.StoreFilters
 {
     public static class PowerSuppliesFilter
     {
-        public static PowerSupply FindPowerSupplyById(List<PowerSupply> powerSupplies, string id)
+        public static PowerSupply FindPowerSupplyById(List<PowerSupply> powerSupplies, int id)
         {
             foreach (PowerSupply powerSupply in powerSupplies)
             {

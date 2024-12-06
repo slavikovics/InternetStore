@@ -56,7 +56,7 @@ public class PowerSupply : StoreItem
         }
     }
     
-    public PowerSupply(string name, string id, decimal price) : base(name, id, price)
+    public PowerSupply(string name, int id, decimal price) : base(name, id, price)
     {
         
     }

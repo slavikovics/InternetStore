@@ -8,7 +8,7 @@ namespace InternetStoreWebApp
 
         public TestLists()
         {
-            powerSupplies.Add(new PowerSupply("1", "1", 100));
+            powerSupplies.Add(new PowerSupply("1", 1, 100));
         }
     }
 }

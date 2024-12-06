@@ -8,7 +8,7 @@ public sealed class CentralProcessingUnitTest
     [TestMethod]
     public void TestMethodSocket()
     {
-        CentralProcessingUnit item = new CentralProcessingUnit("1", "1", 100);
+        CentralProcessingUnit item = new CentralProcessingUnit("1", 1, 100);
 
         try
         {
@@ -36,7 +36,7 @@ public sealed class CentralProcessingUnitTest
     [TestMethod]
     public void TestMethodModelRow()
     {
-        CentralProcessingUnit item = new CentralProcessingUnit("1", "1", 100);
+        CentralProcessingUnit item = new CentralProcessingUnit("1", 1, 100);
 
         try
         {
@@ -64,7 +64,7 @@ public sealed class CentralProcessingUnitTest
     [TestMethod]
     public void TestMethodCoreCount()
     {
-        CentralProcessingUnit item = new CentralProcessingUnit("1", "1", 100);
+        CentralProcessingUnit item = new CentralProcessingUnit("1", 1, 100);
 
         try
         {
@@ -92,7 +92,7 @@ public sealed class CentralProcessingUnitTest
     [TestMethod]
     public void TestMethodDeliveryType()
     {
-        CentralProcessingUnit item = new CentralProcessingUnit("1", "1", 100);
+        CentralProcessingUnit item = new CentralProcessingUnit("1", 1, 100);
         
         Assert.AreEqual(item.DeliveryType, DeliveryType.None);
 
@@ -112,7 +112,7 @@ public sealed class CentralProcessingUnitTest
     [TestMethod]
     public void TestMethodTestCrystalCodeName()
     {
-        CentralProcessingUnit item = new CentralProcessingUnit("1", "1", 100);
+        CentralProcessingUnit item = new CentralProcessingUnit("1", 1, 100);
 
         try
         {
@@ -140,7 +140,7 @@ public sealed class CentralProcessingUnitTest
     [TestMethod]
     public void TestMethodTestBaseFrequency()
     {
-        CentralProcessingUnit item = new CentralProcessingUnit("1", "1", 100);
+        CentralProcessingUnit item = new CentralProcessingUnit("1", 1, 100);
 
         try
         {
@@ -168,7 +168,7 @@ public sealed class CentralProcessingUnitTest
     [TestMethod]
     public void TestMethodTestMaxFrequency()
     {
-        CentralProcessingUnit item = new CentralProcessingUnit("1", "1", 100);
+        CentralProcessingUnit item = new CentralProcessingUnit("1", 1, 100);
 
         try
         {
@@ -196,7 +196,7 @@ public sealed class CentralProcessingUnitTest
     [TestMethod]
     public void TestMethodSupportsMultiThreading()
     {
-        CentralProcessingUnit item = new CentralProcessingUnit("1", "1", 100);
+        CentralProcessingUnit item = new CentralProcessingUnit("1", 1, 100);
 
         try
         {
@@ -223,7 +223,7 @@ public sealed class CentralProcessingUnitTest
     [TestMethod]
     public void TestMethodTestThermalDesignPower()
     {
-        CentralProcessingUnit item = new CentralProcessingUnit("1", "1", 100);
+        CentralProcessingUnit item = new CentralProcessingUnit("1", 1, 100);
 
         try
         {
@@ -251,7 +251,7 @@ public sealed class CentralProcessingUnitTest
     [TestMethod]
     public void TestMethodSupportedRandomAccessMemoryType()
     {
-        CentralProcessingUnit item = new CentralProcessingUnit("1", "1", 100);
+        CentralProcessingUnit item = new CentralProcessingUnit("1", 1, 100);
 
         try
         {

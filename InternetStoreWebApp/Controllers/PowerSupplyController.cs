@@ -21,14 +21,14 @@ namespace InternetStoreWebApp.Controllers
 
         // GET api/<PowerSupplyController>/5
         [HttpGet("GetPowerSupplyByID")]
-        public PowerSupply Get(string id)
+        public PowerSupply Get(int id)
         {
             return PowerSuppliesFilter.FindPowerSupplyById(TestLists.powerSupplies, id);
         }
 
         // POST api/<PowerSupplyController>
         [HttpPost("PostPowerSupply")]
-        public void Post(string name, string id, decimal price)
+        public void Post(string name, int id, decimal price)
         {
             PowerSupply powerSupply = new PowerSupply(name, id, price);
             TestLists.powerSupplies.Add(powerSupply);
@@ -36,7 +36,7 @@ namespace InternetStoreWebApp.Controllers
 
         // DELETE api/<PowerSupplyController>/5
         [HttpDelete("DeletePowerSupply")]
-        public void Delete(string id)
+        public void Delete(int id)
         {
            TestLists.powerSupplies.Remove(PowerSuppliesFilter.FindPowerSupplyById(TestLists.powerSupplies, id));
         }

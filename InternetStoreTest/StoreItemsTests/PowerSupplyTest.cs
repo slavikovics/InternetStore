@@ -8,7 +8,7 @@ public class PowerSupplyTest
     [TestMethod]
     public void TestMethodDeliveryType()
     {
-        PowerSupply item = new PowerSupply("1", "1", 100);
+        PowerSupply item = new PowerSupply("1", 1, 100);
         
         Assert.AreEqual(item.Certificate, PowerSupplyCertificate.None);
 
@@ -28,7 +28,7 @@ public class PowerSupplyTest
     [TestMethod]
     public void TestMethodWattage()
     {
-        PowerSupply item = new PowerSupply("1", "1", 100);
+        PowerSupply item = new PowerSupply("1", 1, 100);
 
         try
         {

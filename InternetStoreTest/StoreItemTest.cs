@@ -8,7 +8,7 @@ public class StoreItemTest
     [TestMethod]
     public void TestMethodTestManufacturer()
     {
-        StoreItem item = new StoreItem("1", "1", 100);
+        StoreItem item = new StoreItem("1", 1, 100);
 
         try
         {
