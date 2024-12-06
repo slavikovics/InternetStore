@@ -2,6 +2,8 @@
 
 public class CentralProcessingUnit : StoreItem
 {
+    public int Id { get; set; }
+
     public CentralProcessingUnitSortingParameters SortingParameters { get; set; }
 
     private string? _socket;
