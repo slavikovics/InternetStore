@@ -29,7 +29,7 @@ public class StoreItem : IComparable
         return _manufacturer;
     }
 
-    public StoreItem(string name, int id, decimal price)
+    public StoreItem(string name, decimal price)
     {
         if (price < 0)
         {
@@ -37,7 +37,6 @@ public class StoreItem : IComparable
         }
         
         Name = name;
-        Id = id;
         Price = price;
     }
 

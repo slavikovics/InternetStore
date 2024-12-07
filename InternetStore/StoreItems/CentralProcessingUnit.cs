@@ -283,7 +283,7 @@ public class CentralProcessingUnit : StoreItem
         return -1;
     }
 
-    public CentralProcessingUnit(string name, int id, decimal price) : base(name, id, price)
+    public CentralProcessingUnit(string name, int id, decimal price) : base(name, price)
     {
         SortingParameters = CentralProcessingUnitSortingParameters.Price;
     }

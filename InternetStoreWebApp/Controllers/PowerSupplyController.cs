@@ -1,6 +1,7 @@
 ﻿using InternetStore;
 using InternetStore.StoreFilters;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -10,35 +11,77 @@ namespace InternetStoreWebApp.Controllers
     [ApiController]
     public class PowerSupplyController : ControllerBase
     {
-        public TestLists TestLists = new TestLists();
+        private readonly Context _context;
 
-        // GET: api/<GetAllPowerSupplies>
+        public PowerSupplyController(Context context)
+        {
+            _context = context;
+        }
+        
         [HttpGet("GetAllPowerSupplies")]
         public IEnumerable<PowerSupply> Get()
         {
-            return TestLists.powerSupplies;
+            return _context.PowerSupplies;
         }
-
-        // GET api/<PowerSupplyController>/5
-        [HttpGet("GetPowerSupplyByID")]
+        
+        [HttpGet("GetPowerSupplyById")]
         public PowerSupply Get(int id)
         {
-            return PowerSuppliesFilter.FindPowerSupplyById(TestLists.powerSupplies, id);
+            return _context.PowerSupplies.Find(id);
         }
-
-        // POST api/<PowerSupplyController>
-        [HttpPost("PostPowerSupply")]
-        public void Post(string name, int id, decimal price)
+        
+        [HttpPost("CreatePowerSupply")]
+        public ActionResult<PowerSupply> Post(string name, decimal price, string manufacturer, double wattage, PowerSupplyCertificate certificate)
         {
-            PowerSupply powerSupply = new PowerSupply(name, id, price);
-            TestLists.powerSupplies.Add(powerSupply);
+            try
+            {
+                PowerSupply powerSupply = new PowerSupply(name, price);
+                powerSupply.Manufacturer = manufacturer;
+                powerSupply.Wattage = wattage;
+                powerSupply.Certificate = certificate;
+                _context.PowerSupplies.Add(powerSupply);
+                _context.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, new { Message = "An error occurred", Details = e.Message });
+            }
+
+            return Ok();
         }
 
-        // DELETE api/<PowerSupplyController>/5
+        [HttpPut("UpdatePowerSupply")]
+        public ActionResult<PowerSupply> Put(int id, string manufacturer, double wattage, PowerSupplyCertificate certificate)
+        {
+            try
+            {
+                PowerSupply foundPowerSupply = _context.Find<PowerSupply>(id);
+                foundPowerSupply.Manufacturer = manufacturer;
+                foundPowerSupply.Wattage = wattage;
+                foundPowerSupply.Certificate = certificate;
+                
+                _context.SaveChanges();
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, new { Message = "An error occurred", Details = e.Message });
+            }
+        }
+        
         [HttpDelete("DeletePowerSupply")]
-        public void Delete(int id)
+        public ActionResult<PowerSupply> Delete(int id)
         {
-           TestLists.powerSupplies.Remove(PowerSuppliesFilter.FindPowerSupplyById(TestLists.powerSupplies, id));
+            try
+            {
+                _context.PowerSupplies.Remove(_context.PowerSupplies.Find(id));
+                _context.SaveChanges();
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, new { Message = "An error occurred", Details = e.Message });
+            }
         }
     }
 }

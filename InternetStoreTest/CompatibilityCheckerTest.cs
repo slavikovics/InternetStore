@@ -11,7 +11,7 @@ public class CompatibilityCheckerTest
         CentralProcessingUnit centralProcessingUnit = new CentralProcessingUnit("1", 1, 100);
         Motherboard motherboard = new Motherboard("1", 1, 200);
         RandomAccessMemory randomAccessMemory = new RandomAccessMemory("1", 1, 150);
-        PowerSupply powerSupply = new PowerSupply("1", 1, 180);
+        PowerSupply powerSupply = new PowerSupply("1", 180);
         Storage storage = new Storage("1", 1, 270);
         GraphicsCard graphicsCard = new GraphicsCard("1", 1, 800);
 
