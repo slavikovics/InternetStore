@@ -8,7 +8,7 @@ public sealed class GraphicsCardTest
     [TestMethod]
     public void TestMethodVideoMemoryType()
     {
-        GraphicsCard item = new GraphicsCard("1", 1, 100);
+        GraphicsCard item = new GraphicsCard("1", 100);
 
         try
         {
@@ -36,7 +36,7 @@ public sealed class GraphicsCardTest
     [TestMethod]
     public void TestMethodGraphicsProcessorName()
     {
-        GraphicsCard item = new GraphicsCard("1", 1, 100);
+        GraphicsCard item = new GraphicsCard("1", 100);
 
         try
         {
@@ -64,7 +64,7 @@ public sealed class GraphicsCardTest
     [TestMethod]
     public void TestMethodTestVideoMemorySize()
     {
-        GraphicsCard item = new GraphicsCard("1", 1, 100);
+        GraphicsCard item = new GraphicsCard("1", 100);
 
         try
         {

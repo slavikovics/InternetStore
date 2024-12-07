@@ -8,9 +8,9 @@ public class StorageFilterTests
     [TestMethod]
     public void TestMethodSortByPrice()
     {
-        Storage storage1 = new Storage("1", 1, new decimal(450.6));
-        Storage storage2 = new Storage("2", 2, new decimal(350.6));
-        Storage storage3 = new Storage("3", 3, new decimal(950.6));
+        Storage storage1 = new Storage("1", new decimal(450.6));
+        Storage storage2 = new Storage("2", new decimal(350.6));
+        Storage storage3 = new Storage("3", new decimal(950.6));
         
         List<Storage> storages = 
         [
@@ -34,9 +34,9 @@ public class StorageFilterTests
     [TestMethod]
     public void TestMethodSortByMemorySize()
     {
-        Storage storage1 = new Storage("1", 1, new decimal(450.6));
-        Storage storage2 = new Storage("2", 2, new decimal(350.6));
-        Storage storage3 = new Storage("3", 3, new decimal(950.6));
+        Storage storage1 = new Storage("1", new decimal(450.6));
+        Storage storage2 = new Storage("2", new decimal(350.6));
+        Storage storage3 = new Storage("3", new decimal(950.6));
 
         storage1.MemorySize = 2000;
         storage2.MemorySize = 8000;

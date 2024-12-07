@@ -8,7 +8,7 @@ public sealed class StorageTest
     [TestMethod]
     public void TestMethodTestMemorySize()
     {
-        Storage item = new Storage("1", 1, 100);
+        Storage item = new Storage("1", 100);
 
         try
         {
@@ -36,7 +36,7 @@ public sealed class StorageTest
     [TestMethod]
     public void TestMethodMemoryType()
     {
-        Storage item = new Storage("1", 1, 100);
+        Storage item = new Storage("1", 100);
 
         try
         {

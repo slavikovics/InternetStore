@@ -65,7 +65,7 @@ public class Motherboard : StoreItem
         return _chipset;
     }
 
-    public Motherboard(string name, int id, decimal price) : base(name, price)
+    public Motherboard(string name, decimal price) : base(name, price)
     {
         
     }

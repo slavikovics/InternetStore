@@ -8,7 +8,7 @@ public sealed class MotherboardTest
     [TestMethod]
     public void TestMethodSocket()
     {
-        Motherboard item = new Motherboard("1", 1, 100);
+        Motherboard item = new Motherboard("1", 100);
 
         try
         {
@@ -36,7 +36,7 @@ public sealed class MotherboardTest
     [TestMethod]
     public void TestMethodSupportedRandomAccessMemoryType()
     {
-        Motherboard item = new Motherboard("1", 1, 100);
+        Motherboard item = new Motherboard("1", 100);
 
         try
         {
@@ -64,7 +64,7 @@ public sealed class MotherboardTest
     [TestMethod]
     public void TestMethodChipset()
     {
-        Motherboard item = new Motherboard("1", 1, 100);
+        Motherboard item = new Motherboard("1", 100);
 
         try
         {

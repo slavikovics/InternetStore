@@ -8,12 +8,12 @@ public class CompatibilityCheckerTest
     [TestMethod]
     public void TestMethodCompatibilityCheck()
     {
-        CentralProcessingUnit centralProcessingUnit = new CentralProcessingUnit("1", 1, 100);
-        Motherboard motherboard = new Motherboard("1", 1, 200);
-        RandomAccessMemory randomAccessMemory = new RandomAccessMemory("1", 1, 150);
+        CentralProcessingUnit centralProcessingUnit = new CentralProcessingUnit("1", 100);
+        Motherboard motherboard = new Motherboard("1", 200);
+        RandomAccessMemory randomAccessMemory = new RandomAccessMemory("1", 150);
         PowerSupply powerSupply = new PowerSupply("1", 180);
-        Storage storage = new Storage("1", 1, 270);
-        GraphicsCard graphicsCard = new GraphicsCard("1", 1, 800);
+        Storage storage = new Storage("1", 270);
+        GraphicsCard graphicsCard = new GraphicsCard("1", 800);
 
         centralProcessingUnit.Socket = "AM4";
         motherboard.Socket = "AM4";

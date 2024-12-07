@@ -8,7 +8,7 @@ public sealed class RandomAccessMemoryTest
     [TestMethod]
     public void TestMethodTestMemorySize()
     {
-        RandomAccessMemory item = new RandomAccessMemory("1", 1, 100);
+        RandomAccessMemory item = new RandomAccessMemory("1", 100);
 
         try
         {
@@ -36,7 +36,7 @@ public sealed class RandomAccessMemoryTest
     [TestMethod]
     public void TestMethodMemoryType()
     {
-        RandomAccessMemory item = new RandomAccessMemory("1", 1, 100);
+        RandomAccessMemory item = new RandomAccessMemory("1", 100);
 
         try
         {

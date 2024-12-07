@@ -9,9 +9,9 @@ public sealed class GraphicsCardFilterTests
     [TestMethod]
     public void TestMethodSortByPrice()
     {
-        GraphicsCard gpu1 = new GraphicsCard("1", 1, new decimal(450.6));
-        GraphicsCard gpu2 = new GraphicsCard("2", 2, new decimal(350.6));
-        GraphicsCard gpu3 = new GraphicsCard("3", 3, new decimal(950.6));
+        GraphicsCard gpu1 = new GraphicsCard("1", new decimal(450.6));
+        GraphicsCard gpu2 = new GraphicsCard("2", new decimal(350.6));
+        GraphicsCard gpu3 = new GraphicsCard("3", new decimal(950.6));
         
         List<GraphicsCard> gpus = 
         [
@@ -35,9 +35,9 @@ public sealed class GraphicsCardFilterTests
     [TestMethod]
     public void TestMethodSortByVideoMemory()
     {
-        GraphicsCard gpu1 = new GraphicsCard("1", 1, new decimal(450.6));
-        GraphicsCard gpu2 = new GraphicsCard("2", 2, new decimal(350.6));
-        GraphicsCard gpu3 = new GraphicsCard("3", 3, new decimal(950.6));
+        GraphicsCard gpu1 = new GraphicsCard("1", new decimal(450.6));
+        GraphicsCard gpu2 = new GraphicsCard("2", new decimal(350.6));
+        GraphicsCard gpu3 = new GraphicsCard("3", new decimal(950.6));
 
         gpu1.VideoMemorySize = 2000;
         gpu2.VideoMemorySize = 8000;

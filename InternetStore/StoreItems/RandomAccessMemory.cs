@@ -76,7 +76,7 @@ public class RandomAccessMemory : StoreItem
         return 1;
     }
     
-    public RandomAccessMemory(string name, int id, decimal price) : base(name, price)
+    public RandomAccessMemory(string name, decimal price) : base(name, price)
     {
         SortingParameters = RandomAccessMemorySortingParameters.Price;
     }
