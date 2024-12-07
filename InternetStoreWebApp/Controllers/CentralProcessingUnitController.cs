@@ -92,5 +92,44 @@ namespace InternetStoreWebApp.Controllers
                 return StatusCode(500, new { Message = "An error occurred", Details = e.Message });
             }
         }
+
+        [HttpGet("ReturnSortedByPrice")]
+        public IEnumerable<CentralProcessingUnit> SortByPrice()
+        {
+            List<CentralProcessingUnit> cpuList = _context.CentralProcessingUnits.ToList();
+            CentralProcessingUnitsFilter.SortByPrice(cpuList);
+            return cpuList;
+        }
+        
+        [HttpGet("ReturnSortedByCoreCount")]
+        public IEnumerable<CentralProcessingUnit> SortByCoreCount()
+        {
+            List<CentralProcessingUnit> cpuList = _context.CentralProcessingUnits.ToList();
+            CentralProcessingUnitsFilter.SortByCoreCount(cpuList);
+            return cpuList;
+        }
+        
+        [HttpGet("ReturnSortedByBaseFrequency")]
+        public IEnumerable<CentralProcessingUnit> SortByBaseFrequency()
+        {
+            List<CentralProcessingUnit> cpuList = _context.CentralProcessingUnits.ToList();
+            CentralProcessingUnitsFilter.SortByBaseFrequency(cpuList);
+            return cpuList;
+        }
+        
+        [HttpGet("ReturnSortedByThermalDesignPower")]
+        public IEnumerable<CentralProcessingUnit> SortByThermalDesignPower()
+        {
+            List<CentralProcessingUnit> cpuList = _context.CentralProcessingUnits.ToList();
+            CentralProcessingUnitsFilter.SortByThermalDesignPower(cpuList);
+            return cpuList;
+        }
+        
+        [HttpGet("FindBySocket")]
+        public IEnumerable<CentralProcessingUnit> FindBySocket(string socket)
+        {
+            List<CentralProcessingUnit> cpuList = _context.CentralProcessingUnits.ToList();
+            return CentralProcessingUnitsFilter.FindCentralProcessingUnitsBySocket(cpuList, socket);
+        }
     }
 }
